@@ -1,692 +1,754 @@
 <div class="img-inner" style=""><img src="/documents/20143/0/Section%281%29.png" /></div>
 <div class="text-center">
-	<h3 style="color: #fff;position: relative; font-size:3.4rem; ">Budget Calculator for Kids</h3> </div>
+    <h3 style="color: #fff;position: relative; font-size:3.4rem; ">Budget Calculator for Kids</h3>
+</div>
 <!-- #############  BEGIN Budget Calculator HTML #############  -->
 <main class="choose-ur-destiny">
-	<div class="container">&nbsp;
-		<p>
-			<!--<i class="icon-circle-arrow-left"></i>--><i class="icon-circle-arrow-left"></i>&nbsp;<a href="/ebws">Back to Buku Wang Saku</a></p> &nbsp;
-		<p align="center">A budget calculator to measure your monthly expenses and incomes. This uses HTML5&#39;s local storage to save the income and outgoing names and values of the Budget Calculator which means, it&#39;s gone once you&#39;ve cleared your browser cookies or using another device.</p>
-		<p align="center">You can start updating your budget and print it.</p>
-		<div class="budget-calculator">
-			<!-- Nav tabs -->
-			<!-- Tab panes -->
-			<br />
-			<br /> &nbsp;
-			<div id="printMe">
-				<h4 align="center">Budget for <!-- <span id="weekcount"></span> --><span id="week"></span> of <!-- <span id="output"></span> --><span id="output"></span> <script type="text/javascript">document.write(new Date().getFullYear());</script></h4>
-				<div onload="LoadFromQueryString();recalc_onclick('');" onunload=''>
-					<form id='formc' name='formc' method='post' action='' target='_self'>
-						<input onfocus="this.value=''" type='hidden' id='xl_spreadsheet' name='xl_spreadsheet' value='kids calculator' />
-						<input onfocus="this.value=''" type='hidden' id='xl_client' name='xl_client' value='x9.3.7189.0' />
-						<div id="tab" class='tab-content'>
-							<div id='sheet-1' style='padding: 1em 1.4em;' class='active'>
-								<section class=''>
-									<table cellspacing='0' cellpadding='0' style='border-spacing:0;' onkeydown='javascript:navigate(event);' class="rwd-table">
-										<thead style='height:15pt;'>
-											<th class='ee100' style='height:15pt;'> Date </th>
-											<th class='ee100' style='height:15pt;'> Transaction Name </th>
-											<th class='ee100' style='height:15pt;'> Income (RM)</th>
-											<th class='ee100' style='height:15pt;'> Expense (RM)</th>
-											<th class='ee100' style='height:15pt;'> Need or Want? </th>
-										</thead>
-										<tr style='height:15pt;'>
-											<td class='ee103' style='height:15pt;'>
-												<div id='cal_date1' class='input-group date ee105' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date1' name='date1' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='1' data-sheet='1' data-row='3' data-col='1'> <span class='input-group-addon add-on'>
+    <div class="container">&nbsp;
+        <p>
+            <!--<i class="icon-circle-arrow-left"></i>--><i class="icon-circle-arrow-left"></i>&nbsp;<a href="/ebws">Back to Buku Wang Saku</a></p> &nbsp;
+        <p align="center">A budget calculator to measure your monthly expenses and incomes. This uses HTML5&#39;s local storage to save the income and outgoing names and values of the Budget Calculator which means, it&#39;s gone once you&#39;ve cleared your browser cookies or using another device.</p>
+        <p align="center">You can start updating your budget and print it.</p>
+        <div class="budget-calculator">
+            <!-- Nav tabs -->
+            <!-- Tab panes -->
+            <br />
+            <br /> &nbsp;
+            <div id="printMe">
+                <h4 align="center">Budget for
+                    <!-- <span id="weekcount"></span> --><span id="week"></span> of
+                    <!-- <span id="output"></span> --><span id="output"></span>
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+
+                    </script>
+                </h4>
+                <hr class="style-two" />
+                <!--   <div class="col-sm-12">
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Total Income (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_24_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_24_2' tabindex='-1' /> </h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Total Expense (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_25_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_25_2' tabindex='-1' /></h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Balance I Have (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_26_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_26_2' tabindex='-1' /></h4>
+                                        </div>
+                                    </div>-->
+                <div onload="LoadFromQueryString();recalc_onclick('');" onunload=''>
+                    <form id='formc' name='formc' method='post' action='' target='_self'>
+                        <input onfocus="this.value=''" type='hidden' id='xl_spreadsheet' name='xl_spreadsheet' value='kids calculator' />
+                        <input onfocus="this.value=''" type='hidden' id='xl_client' name='xl_client' value='x9.3.7189.0' />
+                        <div id="tab" class='tab-content'>
+                            <div id='sheet-1' style='padding: 1em 1.4em;' class='active'>
+                                <section class=''>
+                                    <table cellspacing='0' cellpadding='0' style='border-spacing:0;' onkeydown='javascript:navigate(event);' class="rwd-table">
+                                        <thead>
+                                            <th class='ee100'> Date </th>
+                                            <th class='ee100' style="text-align: center"> Transaction Name </th>
+                                            <th class='ee100' style="text-align: center"> Income (RM)</th>
+                                            <th class='ee100' style="text-align: center"> Expense (RM)</th>
+                                            <th class='ee100' style="text-align: center"> Need or Want? </th>
+                                        </thead>
+                                        <tr>
+                                            <td class='ee103'>
+                                                <div id='cal_date1' class='input-group date ee105' style='min-width: 9em;'>
+                                                    <input id='date1' name='date1' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='1' data-sheet='1' data-row='3' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction1' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction1')" name='transaction1' placeholder='' tabindex='2' data-sheet='1' data-row='3' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income1' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income1')" name='income1' placeholder='' tabindex='3' data-sheet='1' data-row='3' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense2' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense2')" name='expense2' placeholder='' tabindex='4' data-sheet='1' data-row='3' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type1' style='border:0;padding:0;'>
-													<select name='type1' id='type1' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='5' onchange="recalc_onclick('type1')" size='1' data-sheet='1' data-row='3' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction1' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction1')" name='transaction1' placeholder='' tabindex='2' data-sheet='1' data-row='3' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income1' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income1')" name='income1' placeholder='' tabindex='3' data-sheet='1' data-row='3' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense2' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense2')" name='expense2' placeholder='' tabindex='4' data-sheet='1' data-row='3' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type1' style='border:0;padding:0;'>
+                                                    <select name='type1' id='type1' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='5' onchange="recalc_onclick('type1')" size='1' data-sheet='1' data-row='3' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date2' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date2' name='date2' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='6' data-sheet='1' data-row='4' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date2' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date2' name='date2' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='6' data-sheet='1' data-row='4' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction2' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction2')" name='transaction2' placeholder='' tabindex='7' data-sheet='1' data-row='4' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income2' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income2')" name='income2' placeholder='' tabindex='8' data-sheet='1' data-row='4' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='xlew_1_4_4' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('xlew_1_4_4')" name='xlew_1_4_4' placeholder='' tabindex='9' data-sheet='1' data-row='4' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type2' style='border:0;padding:0;'>
-													<select name='type2' id='type2' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='10' onchange="recalc_onclick('type2')" size='1' data-sheet='1' data-row='4' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction2' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction2')" name='transaction2' placeholder='' tabindex='7' data-sheet='1' data-row='4' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income2' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income2')" name='income2' placeholder='' tabindex='8' data-sheet='1' data-row='4' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='xlew_1_4_4' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('xlew_1_4_4')" name='xlew_1_4_4' placeholder='' tabindex='9' data-sheet='1' data-row='4' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type2' style='border:0;padding:0;'>
+                                                    <select name='type2' id='type2' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='10' onchange="recalc_onclick('type2')" size='1' data-sheet='1' data-row='4' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date3' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date3' name='date3' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='11' data-sheet='1' data-row='5' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date3' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date3' name='date3' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='11' data-sheet='1' data-row='5' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction3' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction3')" name='transaction3' placeholder='' tabindex='12' data-sheet='1' data-row='5' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income3' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income3')" name='income3' placeholder='' tabindex='13' data-sheet='1' data-row='5' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense3' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense3')" name='expense3' placeholder='' tabindex='14' data-sheet='1' data-row='5' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type3' style='border:0;padding:0;'>
-													<select name='type3' id='type3' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='15' onchange="recalc_onclick('type3')" size='1' data-sheet='1' data-row='5' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction3' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction3')" name='transaction3' placeholder='' tabindex='12' data-sheet='1' data-row='5' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income3' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income3')" name='income3' placeholder='' tabindex='13' data-sheet='1' data-row='5' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense3' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense3')" name='expense3' placeholder='' tabindex='14' data-sheet='1' data-row='5' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type3' style='border:0;padding:0;'>
+                                                    <select name='type3' id='type3' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='15' onchange="recalc_onclick('type3')" size='1' data-sheet='1' data-row='5' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date4' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date4' name='date4' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='16' data-sheet='1' data-row='6' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date4' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date4' name='date4' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='16' data-sheet='1' data-row='6' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction4' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction4')" name='transaction4' placeholder='' tabindex='17' data-sheet='1' data-row='6' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income4' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income4')" name='income4' placeholder='' tabindex='18' data-sheet='1' data-row='6' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense4' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense4')" name='expense4' placeholder='' tabindex='19' data-sheet='1' data-row='6' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type4' style='border:0;padding:0;'>
-													<select name='type4' id='type4' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='20' onchange="recalc_onclick('type4')" size='1' data-sheet='1' data-row='6' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction4' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction4')" name='transaction4' placeholder='' tabindex='17' data-sheet='1' data-row='6' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income4' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income4')" name='income4' placeholder='' tabindex='18' data-sheet='1' data-row='6' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense4' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense4')" name='expense4' placeholder='' tabindex='19' data-sheet='1' data-row='6' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type4' style='border:0;padding:0;'>
+                                                    <select name='type4' id='type4' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='20' onchange="recalc_onclick('type4')" size='1' data-sheet='1' data-row='6' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-									</table>
-									<div id="grayy" style="float:right"><span id="btnAdd" name="btn btnAdd" class="span1" ><i class="icon-plus"></i>TRANSACTION</span></div>
-									<table cellspacing='0' cellpadding='0' style="display: block;" onkeydown='javascript:navigate(event);' class="rwd-table td1" >
-										<tr id=td1 style='height:15pt;'>
-											
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date5' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date5' name='date5' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='21' data-sheet='1' data-row='7' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date5' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date5' name='date5' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='21' data-sheet='1' data-row='7' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction5' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction5')" name='transaction5' placeholder='' tabindex='22' data-sheet='1' data-row='7' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income5' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income5')" name='income5' placeholder='' tabindex='23' data-sheet='1' data-row='7' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense5' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense5')" name='expense5' placeholder='' tabindex='24' data-sheet='1' data-row='7' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type5' style='border:0;padding:0;'>
-													<select name='type5' id='type5' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='25' onchange="recalc_onclick('type5')" size='1' data-sheet='1' data-row='7' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction5' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction5')" name='transaction5' placeholder='' tabindex='22' data-sheet='1' data-row='7' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income5' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income5')" name='income5' placeholder='' tabindex='23' data-sheet='1' data-row='7' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense5' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense5')" name='expense5' placeholder='' tabindex='24' data-sheet='1' data-row='7' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type5' style='border:0;padding:0;'>
+                                                    <select name='type5' id='type5' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='25' onchange="recalc_onclick('type5')" size='1' data-sheet='1' data-row='7' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date6' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date6' name='date6' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='26' data-sheet='1' data-row='8' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p id="listOfbtn"><button id="grayy" class="btnzz btn"><i class="icon-plus"></i>TRANSACTION</button></p>
+                                    <p>&nbsp;</p>
+                                    <table cellspacing='0' cellpadding='0' style="display: block;" onkeydown='javascript:navigate(event);' class="rwd-table myTable">
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date6' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date6' name='date6' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='26' data-sheet='1' data-row='8' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction6' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction6')" name='transaction6' placeholder='' tabindex='27' data-sheet='1' data-row='8' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income6' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income6')" name='income6' placeholder='' tabindex='28' data-sheet='1' data-row='8' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense6' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense6')" name='expense6' placeholder='' tabindex='29' data-sheet='1' data-row='8' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type6' style='border:0;padding:0;'>
-													<select name='type6' id='type6' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='30' onchange="recalc_onclick('type6')" size='1' data-sheet='1' data-row='8' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction6' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction6')" name='transaction6' placeholder='' tabindex='27' data-sheet='1' data-row='8' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income6' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income6')" name='income6' placeholder='' tabindex='28' data-sheet='1' data-row='8' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense6' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense6')" name='expense6' placeholder='' tabindex='29' data-sheet='1' data-row='8' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type6' style='border:0;padding:0;'>
+                                                    <select name='type6' id='type6' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='30' onchange="recalc_onclick('type6')" size='1' data-sheet='1' data-row='8' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date7' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date7' name='date7' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='31' data-sheet='1' data-row='9' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date7' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date7' name='date7' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='31' data-sheet='1' data-row='9' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction7' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction7')" name='transaction7' placeholder='' tabindex='32' data-sheet='1' data-row='9' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income7' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income7')" name='income7' placeholder='' tabindex='33' data-sheet='1' data-row='9' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense7' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense7')" name='expense7' placeholder='' tabindex='34' data-sheet='1' data-row='9' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type7' style='border:0;padding:0;'>
-													<select name='type7' id='type7' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='35' onchange="recalc_onclick('type7')" size='1' data-sheet='1' data-row='9' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction7' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction7')" name='transaction7' placeholder='' tabindex='32' data-sheet='1' data-row='9' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income7' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income7')" name='income7' placeholder='' tabindex='33' data-sheet='1' data-row='9' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense7' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense7')" name='expense7' placeholder='' tabindex='34' data-sheet='1' data-row='9' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type7' style='border:0;padding:0;'>
+                                                    <select name='type7' id='type7' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='35' onchange="recalc_onclick('type7')" size='1' data-sheet='1' data-row='9' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date8' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date8' name='date8' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='36' data-sheet='1' data-row='10' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date8' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date8' name='date8' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='36' data-sheet='1' data-row='10' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction8' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction8')" name='transaction8' placeholder='' tabindex='37' data-sheet='1' data-row='10' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income8' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income8')" name='income8' placeholder='' tabindex='38' data-sheet='1' data-row='10' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense8' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense8')" name='expense8' placeholder='' tabindex='39' data-sheet='1' data-row='10' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type8' style='border:0;padding:0;'>
-													<select name='type8' id='type8' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='40' onchange="recalc_onclick('type8')" size='1' data-sheet='1' data-row='10' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction8' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction8')" name='transaction8' placeholder='' tabindex='37' data-sheet='1' data-row='10' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income8' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income8')" name='income8' placeholder='' tabindex='38' data-sheet='1' data-row='10' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense8' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense8')" name='expense8' placeholder='' tabindex='39' data-sheet='1' data-row='10' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type8' style='border:0;padding:0;'>
+                                                    <select name='type8' id='type8' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='40' onchange="recalc_onclick('type8')" size='1' data-sheet='1' data-row='10' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date9' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date9' name='date9' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='41' data-sheet='1' data-row='11' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date9' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date9' name='date9' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='41' data-sheet='1' data-row='11' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction9' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction9')" name='transaction9' placeholder='' tabindex='42' data-sheet='1' data-row='11' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income9' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income9')" name='income9' placeholder='' tabindex='43' data-sheet='1' data-row='11' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense9' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense9')" name='expense9' placeholder='' tabindex='44' data-sheet='1' data-row='11' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type9' style='border:0;padding:0;'>
-													<select name='type9' id='type9' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='45' onchange="recalc_onclick('type9')" size='1' data-sheet='1' data-row='11' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction9' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction9')" name='transaction9' placeholder='' tabindex='42' data-sheet='1' data-row='11' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income9' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income9')" name='income9' placeholder='' tabindex='43' data-sheet='1' data-row='11' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense9' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense9')" name='expense9' placeholder='' tabindex='44' data-sheet='1' data-row='11' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type9' style='border:0;padding:0;'>
+                                                    <select name='type9' id='type9' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='45' onchange="recalc_onclick('type9')" size='1' data-sheet='1' data-row='11' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date10' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date10' name='date10' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='46' data-sheet='1' data-row='12' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date10' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date10' name='date10' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='46' data-sheet='1' data-row='12' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction10' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction10')" name='transaction10' placeholder='' tabindex='47' data-sheet='1' data-row='12' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income10' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income10')" name='income10' placeholder='' tabindex='48' data-sheet='1' data-row='12' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense10' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense10')" name='expense10' placeholder='' tabindex='49' data-sheet='1' data-row='12' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type10' style='border:0;padding:0;'>
-													<select name='type10' id='type10' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='50' onchange="recalc_onclick('type10')" size='1' data-sheet='1' data-row='12' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction10' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction10')" name='transaction10' placeholder='' tabindex='47' data-sheet='1' data-row='12' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income10' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income10')" name='income10' placeholder='' tabindex='48' data-sheet='1' data-row='12' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense10' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense10')" name='expense10' placeholder='' tabindex='49' data-sheet='1' data-row='12' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type10' style='border:0;padding:0;'>
+                                                    <select name='type10' id='type10' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='50' onchange="recalc_onclick('type10')" size='1' data-sheet='1' data-row='12' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date11' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date11' name='date11' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='51' data-sheet='1' data-row='13' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date11' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date11' name='date11' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='51' data-sheet='1' data-row='13' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction11' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction11')" name='transaction11' placeholder='' tabindex='52' data-sheet='1' data-row='13' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income11' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income11')" name='income11' placeholder='' tabindex='53' data-sheet='1' data-row='13' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense11' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense11')" name='expense11' placeholder='' tabindex='54' data-sheet='1' data-row='13' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type11' style='border:0;padding:0;'>
-													<select name='type11' id='type11' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='55' onchange="recalc_onclick('type11')" size='1' data-sheet='1' data-row='13' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction11' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction11')" name='transaction11' placeholder='' tabindex='52' data-sheet='1' data-row='13' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income11' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income11')" name='income11' placeholder='' tabindex='53' data-sheet='1' data-row='13' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense11' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense11')" name='expense11' placeholder='' tabindex='54' data-sheet='1' data-row='13' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type11' style='border:0;padding:0;'>
+                                                    <select name='type11' id='type11' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='55' onchange="recalc_onclick('type11')" size='1' data-sheet='1' data-row='13' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date12' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date12' name='date12' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='56' data-sheet='1' data-row='14' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date12' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date12' name='date12' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='56' data-sheet='1' data-row='14' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction12' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction12')" name='transaction12' placeholder='' tabindex='57' data-sheet='1' data-row='14' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income12' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income12')" name='income12' placeholder='' tabindex='58' data-sheet='1' data-row='14' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense12' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense12')" name='expense12' placeholder='' tabindex='59' data-sheet='1' data-row='14' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type12' style='border:0;padding:0;'>
-													<select name='type12' id='type12' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='60' onchange="recalc_onclick('type12')" size='1' data-sheet='1' data-row='14' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction12' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction12')" name='transaction12' placeholder='' tabindex='57' data-sheet='1' data-row='14' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income12' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income12')" name='income12' placeholder='' tabindex='58' data-sheet='1' data-row='14' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense12' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense12')" name='expense12' placeholder='' tabindex='59' data-sheet='1' data-row='14' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type12' style='border:0;padding:0;'>
+                                                    <select name='type12' id='type12' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='60' onchange="recalc_onclick('type12')" size='1' data-sheet='1' data-row='14' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date13' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date13' name='date13' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='61' data-sheet='1' data-row='15' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date13' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date13' name='date13' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='61' data-sheet='1' data-row='15' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction13' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction13')" name='transaction13' placeholder='' tabindex='62' data-sheet='1' data-row='15' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='xlew_1_15_3' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('xlew_1_15_3')" name='xlew_1_15_3' placeholder='' tabindex='63' data-sheet='1' data-row='15' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense13' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense13')" name='expense13' placeholder='' tabindex='64' data-sheet='1' data-row='15' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type13' style='border:0;padding:0;'>
-													<select name='type13' id='type13' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='65' onchange="recalc_onclick('type13')" size='1' data-sheet='1' data-row='15' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction13' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction13')" name='transaction13' placeholder='' tabindex='62' data-sheet='1' data-row='15' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='xlew_1_15_3' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('xlew_1_15_3')" name='xlew_1_15_3' placeholder='' tabindex='63' data-sheet='1' data-row='15' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense13' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense13')" name='expense13' placeholder='' tabindex='64' data-sheet='1' data-row='15' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type13' style='border:0;padding:0;'>
+                                                    <select name='type13' id='type13' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='65' onchange="recalc_onclick('type13')" size='1' data-sheet='1' data-row='15' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date14' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date14' name='date14' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='66' data-sheet='1' data-row='16' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date14' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date14' name='date14' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='66' data-sheet='1' data-row='16' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction14' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction14')" name='transaction14' placeholder='' tabindex='67' data-sheet='1' data-row='16' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income14' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income14')" name='income14' placeholder='' tabindex='68' data-sheet='1' data-row='16' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense14' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense14')" name='expense14' placeholder='' tabindex='69' data-sheet='1' data-row='16' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type14' style='border:0;padding:0;'>
-													<select name='type14' id='type14' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='70' onchange="recalc_onclick('type14')" size='1' data-sheet='1' data-row='16' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction14' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction14')" name='transaction14' placeholder='' tabindex='67' data-sheet='1' data-row='16' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income14' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income14')" name='income14' placeholder='' tabindex='68' data-sheet='1' data-row='16' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense14' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense14')" name='expense14' placeholder='' tabindex='69' data-sheet='1' data-row='16' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type14' style='border:0;padding:0;'>
+                                                    <select name='type14' id='type14' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='70' onchange="recalc_onclick('type14')" size='1' data-sheet='1' data-row='16' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date15' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date15' name='date15' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='71' data-sheet='1' data-row='17' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date15' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date15' name='date15' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='71' data-sheet='1' data-row='17' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction15' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction15')" name='transaction15' placeholder='' tabindex='72' data-sheet='1' data-row='17' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income15' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income15')" name='income15' placeholder='' tabindex='73' data-sheet='1' data-row='17' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense15' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense15')" name='expense15' placeholder='' tabindex='74' data-sheet='1' data-row='17' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type15' style='border:0;padding:0;'>
-													<select name='type15' id='type15' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='75' onchange="recalc_onclick('type15')" size='1' data-sheet='1' data-row='17' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction15' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction15')" name='transaction15' placeholder='' tabindex='72' data-sheet='1' data-row='17' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income15' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income15')" name='income15' placeholder='' tabindex='73' data-sheet='1' data-row='17' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense15' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense15')" name='expense15' placeholder='' tabindex='74' data-sheet='1' data-row='17' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type15' style='border:0;padding:0;'>
+                                                    <select name='type15' id='type15' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='75' onchange="recalc_onclick('type15')" size='1' data-sheet='1' data-row='17' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date16' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date16' name='date16' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='76' data-sheet='1' data-row='18' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date16' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date16' name='date16' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='76' data-sheet='1' data-row='18' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction16' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction16')" name='transaction16' placeholder='' tabindex='77' data-sheet='1' data-row='18' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income16' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income16')" name='income16' placeholder='' tabindex='78' data-sheet='1' data-row='18' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense16' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense16')" name='expense16' placeholder='' tabindex='79' data-sheet='1' data-row='18' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type16' style='border:0;padding:0;'>
-													<select name='type16' id='type16' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='80' onchange="recalc_onclick('type16')" size='1' data-sheet='1' data-row='18' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction16' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction16')" name='transaction16' placeholder='' tabindex='77' data-sheet='1' data-row='18' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income16' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income16')" name='income16' placeholder='' tabindex='78' data-sheet='1' data-row='18' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense16' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense16')" name='expense16' placeholder='' tabindex='79' data-sheet='1' data-row='18' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type16' style='border:0;padding:0;'>
+                                                    <select name='type16' id='type16' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='80' onchange="recalc_onclick('type16')" size='1' data-sheet='1' data-row='18' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date17' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date17' name='date17' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='81' data-sheet='1' data-row='19' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date17' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date17' name='date17' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='81' data-sheet='1' data-row='19' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction17' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction17')" name='transaction17' placeholder='' tabindex='82' data-sheet='1' data-row='19' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income17' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income17')" name='income17' placeholder='' tabindex='83' data-sheet='1' data-row='19' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense17' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense17')" name='expense17' placeholder='' tabindex='84' data-sheet='1' data-row='19' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type17' style='border:0;padding:0;'>
-													<select name='type17' id='type17' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='85' onchange="recalc_onclick('type17')" size='1' data-sheet='1' data-row='19' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction17' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction17')" name='transaction17' placeholder='' tabindex='82' data-sheet='1' data-row='19' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income17' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income17')" name='income17' placeholder='' tabindex='83' data-sheet='1' data-row='19' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense17' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense17')" name='expense17' placeholder='' tabindex='84' data-sheet='1' data-row='19' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type17' style='border:0;padding:0;'>
+                                                    <select name='type17' id='type17' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='85' onchange="recalc_onclick('type17')" size='1' data-sheet='1' data-row='19' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date18' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date18' name='date18' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='86' data-sheet='1' data-row='20' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date18' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date18' name='date18' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='86' data-sheet='1' data-row='20' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction18' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction18')" name='transaction18' placeholder='' tabindex='87' data-sheet='1' data-row='20' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income18' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income18')" name='income18' placeholder='' tabindex='88' data-sheet='1' data-row='20' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense18' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense18')" name='expense18' placeholder='' tabindex='89' data-sheet='1' data-row='20' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type18' style='border:0;padding:0;'>
-													<select name='type18' id='type18' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='90' onchange="recalc_onclick('type18')" size='1' data-sheet='1' data-row='20' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction18' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction18')" name='transaction18' placeholder='' tabindex='87' data-sheet='1' data-row='20' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income18' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income18')" name='income18' placeholder='' tabindex='88' data-sheet='1' data-row='20' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense18' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense18')" name='expense18' placeholder='' tabindex='89' data-sheet='1' data-row='20' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type18' style='border:0;padding:0;'>
+                                                    <select name='type18' id='type18' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='90' onchange="recalc_onclick('type18')" size='1' data-sheet='1' data-row='20' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date19' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date19' name='date19' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='91' data-sheet='1' data-row='21' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date19' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date19' name='date19' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='91' data-sheet='1' data-row='21' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction19' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction19')" name='transaction19' placeholder='' tabindex='92' data-sheet='1' data-row='21' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income19' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income19')" name='income19' placeholder='' tabindex='93' data-sheet='1' data-row='21' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense19' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense19')" name='expense19' placeholder='' tabindex='94' data-sheet='1' data-row='21' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type19' style='border:0;padding:0;'>
-													<select name='type19' id='type19' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='95' onchange="recalc_onclick('type19')" size='1' data-sheet='1' data-row='21' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction19' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction19')" name='transaction19' placeholder='' tabindex='92' data-sheet='1' data-row='21' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income19' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income19')" name='income19' placeholder='' tabindex='93' data-sheet='1' data-row='21' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense19' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense19')" name='expense19' placeholder='' tabindex='94' data-sheet='1' data-row='21' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type19' style='border:0;padding:0;'>
+                                                    <select name='type19' id='type19' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='95' onchange="recalc_onclick('type19')" size='1' data-sheet='1' data-row='21' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee106' style='height:15pt;'>
-												<div id='cal_date20' class='input-group date ee102' style='min-width: 9em;'>
-													<input onfocus="this.value=''" id='date20' name='date20' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='96' data-sheet='1' data-row='22' data-col='1'> <span class='input-group-addon add-on'>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class='ee106'>
+                                                <div id='cal_date20' class='input-group date ee102' style='min-width: 9em;'>
+                                                    <input id='date20' name='date20' class='form-control' size='16' type='text' data-widgettype='datepicker' tabindex='96' data-sheet='1' data-row='22' data-col='1'> <span class='input-group-addon add-on'>
                                         <i class='glyphicon glyphicon-calendar'></i> 
                                     </span> </div>
-											</td>
-											<td class='ee106' style='height:15pt;'>
-												<input onfocus="this.value=''" id='transaction20' type='text' value='' class='ee102 form-control' style='width:100%' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction20')" name='transaction20' placeholder='' tabindex='97' data-sheet='1' data-row='22' data-col='2' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='income20' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income20')" name='income20' placeholder='' tabindex='98' data-sheet='1' data-row='22' data-col='3' /> </td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='expense20' type='text' value='' class='ee105 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense20')" name='expense20' placeholder='' tabindex='99' data-sheet='1' data-row='22' data-col='4' /> </td>
-											<td class='ee106' style='height:15pt;'>
-												<fieldset id='FS1$type20' style='border:0;padding:0;'>
-													<select name='type20' id='type20' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='100' onchange="recalc_onclick('type20')" size='1' data-sheet='1' data-row='22' data-col='5'>
+                                            </td>
+                                            <td class='ee106'>
+                                                <input onfocus="this.value=''" id='transaction20' type='text' value='' class='ee102 form-control' onchange="this.value=eedatefmtv(fmtdate1,eeparsedate_keep_allV(this.value));recalc_onclick('transaction20')" name='transaction20' placeholder='' tabindex='97' data-sheet='1' data-row='22' data-col='2' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='income20' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('income20')" name='income20' placeholder='' tabindex='98' data-sheet='1' data-row='22' data-col='3' /> </td>
+                                            <td class='ee103'>
+                                                <input onfocus="this.value=''" id='expense20' type='text' value='' class='ee105 form-control' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('expense20')" name='expense20' placeholder='' tabindex='99' data-sheet='1' data-row='22' data-col='4' /> </td>
+                                            <td class='ee106'>
+                                                <fieldset id='FS1$type20' style='border:0;padding:0;'>
+                                                    <select name='type20' id='type20' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='100' onchange="recalc_onclick('type20')" size='1' data-sheet='1' data-row='22' data-col='5'>
 														<option data-value='s:' value=''>-Please Select</option>
 														<option data-value='s:Need'>Need</option>
 														<option data-value='s:Want'>Want</option>
 													</select>
-												</fieldset>
-											</td>
-										</tr>
-										
-									</table>
-									<table cellspacing='0' cellpadding='0' style='border-spacing:0;' class="rwd-table"><tr class="last" style='height:15pt;'>
-											<td class='ee100' style='height:15pt;'> Total Income (RM)</td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='XLEW_1_24_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_24_2' tabindex='-1' /> </td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee100' style='height:15pt;'> Total Expense (RM)</td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='XLEW_1_25_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_25_2' tabindex='-1' /> </td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-										</tr>
-										<tr style='height:15pt;'>
-											<td class='ee100' style='height:15pt;'> Balance I Have (RM)</td>
-											<td class='ee103' style='height:15pt;'>
-												<input onfocus="this.value=''" id='XLEW_1_26_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_26_2' tabindex='-1' /> </td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-											<td class='ee100' style='height:15pt;'>&nbsp;</td>
-										</tr></table>
-								</section>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div align=right><span id='grayy' class="btn button-reset"><i class="icon-refresh"></i></span> <span id='redd' class='btn btn-label btn-label-right button-update'>Update</span> <span id='redd' class="btn btn-xs btn-primary btn-danger" data-type="outgoings" onclick="printDiv('printMe')"><i class="icon-print"></i> print</span> </div>
-	</div>
+                                                </fieldset>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                    <div class="col-sm-12">
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Total Income (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_24_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_24_2' tabindex='-1' /> </h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Total Expense (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_25_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_25_2' tabindex='-1' /></h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4 align=center>Balance I Have (RM)
+                                                <input onfocus="this.value=''" id='XLEW_1_26_2' type='text' readonly='readonly' value='0' class='ee103' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_26_2' tabindex='-1' /></h4>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="listOfbtn"><span id='grayy' class="btn button-reset"><i class="icon-refresh"></i></span> <span id='redd' class='btn btn-label btn-label-right button-update'>Update</span> <span id='redd' class="btn btn-xs btn-primary btn-danger" data-type="outgoings" onclick="printDiv('printMe')"><i class="icon-print"></i> print</span> </div>
+    </div>
 </main>
 <style>
-@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
-	.rwd-table {
-		margin: 1em 0;
-		min-width: 300px;
-	}
-	
-	.rwd-table tr {
-		border-top: 1px solid #ddd;
-		border-bottom: 1px solid #ddd;
-	}
-	
-	.rwd-table tr .last {
-		color: gold;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-}
-.rwd-table th {
-	display: none;
-	text-align: center;
-	color: gold;
-}
-.rwd-table td {
-	display: block;
-}
-.rwd-table td:first-child {
-	padding-top: .5em;
-}
-.rwd-table td:last-child {
-	padding-bottom: .5em;
-}
-.rwd-table td:before {
-	content: attr(data-th) ": ";
-	font-weight: bold;
-	width: 6.5em;
-	display: inline-block;
-}
-@media (min-width: 480px) {
-	.rwd-table td:before {
-		display: none;
-	}
-}
-.rwd-table th,
-.rwd-table td {
-	text-align: left;
-}
-@media (min-width: 480px) {
-	.rwd-table th,
-	.rwd-table td {
-		display: table-cell;
-		padding: .25em .5em;
-	}
-	
-	.rwd-table th:first-child,
-	.rwd-table td:first-child {
-		padding-left: 0;
-	}
-	
-	.rwd-table th:last-child,
-	.rwd-table td:last-child {
-		padding-right: 0;
-	}
-}
-input {
-	border-top: 0;
-	border-left: 0;
-	border-bottom: 2px solid coral;
-	border-right: 0;
-}
-.rwd-table {
-	background: #34495E;
-	color: #fff;
-	border-radius: .4em;
-	overflow: hidden;
-}
-.rwd-table tr {
-	border-color: #46637f;
-}
-.rwd-table th,
-.rwd-table td {
-	margin: .5em 1em;
-}
-@media (min-width: 480px) {
-	.rwd-table th,
-	.rwd-table td {
-		padding: 1em !important;
-	}
-}
-.rwd-table th,
-.rwd-table td:before {
-	color: #dd5;
-}
-.modal {
-	display: none;
-}
-#grayy {
-	background: #f5f5f5;
-	color: #f4675d;
-	border: 0;
-	border-radius: 6px;
-	font-weight: normal;
-}
-#redd {
-	color: #f5f5f5;
-	background: #f4675d;
-	border: 0;
-	border-radius: 6px;
-	font-weight: normal;
-}
-#printMe {
-	width: 90%;
-	margin: auto;
-}
-hr.style-two {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-.choose-ur-destiny .container {
-	background-color: #fff;
-	position: relative;
-	width: 80%;
-	margin: 0 auto;
-	/*padding: 40px;*/
-}
-.img-inner img {
-	height: 400px;
-	position: absolute;
-	width: 100%;
-}
+    #listOfbtn {
+        float: right;
+        margin-right: 7%
+    }
+    
+    @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+    .rwd-table {
+        margin: 1em 0;
+        min-width: 300px;
+    }
+    
+    .rwd-table tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .rwd-table tr .last {
+        color: gold;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .rwd-table th {
+        display: none;
+        text-align: center;
+        color: gold;
+    }
+    
+    .rwd-table td {
+        display: block;
+    }
+    
+    .rwd-table td:first-child {
+        padding-top: .5em;
+    }
+    
+    .rwd-table td:last-child {
+        padding-bottom: .5em;
+    }
+    
+    .rwd-table td:before {
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+    
+    @media (min-width: 480px) {
+        .rwd-table td:before {
+            display: none;
+        }
+    }
+    
+    .rwd-table th,
+    .rwd-table td {
+        text-align: left;
+    }
+    
+    @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            display: table-cell;
+            padding: .25em .5em;
+        }
+        .rwd-table th:first-child,
+        .rwd-table td:first-child {
+            padding-left: 0;
+        }
+        .rwd-table th:last-child,
+        .rwd-table td:last-child {
+            padding-right: 0;
+        }
+    }
+    
+    input {
+        border-top: 0;
+        border-left: 0;
+        border-bottom: 2px solid coral;
+        border-right: 0;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .rwd-table {
+        background: #34495E;
+        color: #fff;
+        border-radius: .4em;
+        overflow: hidden;
+    }
+    
+    .rwd-table tr {
+        border-color: #46637f;
+    }
+    
+    .rwd-table th,
+    .rwd-table td {
+        margin: .5em 1em;
+    }
+    
+    @media (min-width: 480px) {
+        .rwd-table th,
+        .rwd-table td {
+            padding: 1em !important;
+        }
+    }
+    
+    .rwd-table th,
+    .rwd-table td:before {
+        color: #dd5;
+    }
+    
+    .modal {
+        display: none;
+    }
+    
+    #grayy {
+        background: #f5f5f5;
+        color: #f4675d;
+        border: 0;
+        border-radius: 6px;
+        font-weight: normal;
+    }
+    
+    #redd {
+        color: #f5f5f5;
+        background: #f4675d;
+        border: 0;
+        border-radius: 6px;
+        font-weight: normal;
+    }
+    
+    #printMe {
+        width: 90%;
+        margin: auto;
+    }
+    
+    hr.style-two {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+    
+    .choose-ur-destiny .container {
+        background-color: #fff;
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        /*padding: 40px;*/
+    }
+    
+    .img-inner img {
+        height: 400px;
+        position: absolute;
+        width: 100%;
+    }
+
 </style>
 <script>
-	Date.prototype.getMonthWeek = function () {
-		var firstDay = new Date(this.getFullYear(), this.getMonth(), 1).getDay();
-		return Math.ceil((this.getDate() + firstDay) / 7);
-	}
-	$("#week").html("week " + new Date().getMonthWeek());
+    Date.prototype.getMonthWeek = function() {
+        var firstDay = new Date(this.getFullYear(), this.getMonth(), 1).getDay();
+        return Math.ceil((this.getDate() + firstDay) / 7);
+    }
+    $("#week").html("week " + new Date().getMonthWeek());
+
 </script>
 <script>
-	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	var now = new Date();
-	var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
-	var output = document.getElementById('output');
-	console.log(thisMonth);
-	if (output.textContent !== undefined) {
-		output.textContent = thisMonth;
-	}
-	else {
-		output.innerText = thisMonth;
-	}
-	// check also http://stackoverflow.com/questions/4822852/how-to-get-the-day-of-week-and-the-month-of-the-year
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var now = new Date();
+    var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
+    var output = document.getElementById('output');
+    console.log(thisMonth);
+    if (output.textContent !== undefined) {
+        output.textContent = thisMonth;
+    } else {
+        output.innerText = thisMonth;
+    }
+    // check also http://stackoverflow.com/questions/4822852/how-to-get-the-day-of-week-and-the-month-of-the-year
+
 </script>
-<script>$('#btnAdd').on('click', function (e) {
-        e.preventDefault();
-        var elem = $(this).next('.td1')
-        elem.toggle('slow');
+<script>
+    /*$(".btn").click(function() {
+      $(".myText").toggle();  
+    });*/
+
+    // OR
+
+    $(".btnzz").click(function() {
+
+        var lable = $(".btnzz").text().trim();
+
+        if (lable == "Hide") {
+            $(".btnzz").text("Add");
+            $(".myTable").hide();
+        } else {
+            $(".btnzz").text("Hide");
+            $(".myTable").show();
+        }
+
     });
+
 </script>
-<script type="text/javascript" src="/documents/20143/203989/app.min.js/8a0d4238-800f-4cc5-eb24-1b7ab40459f3"></script>
+<script type="text/javascript" src="/documents/20143/203989/app.min.js"></script>
+
+<script>
+function myFunction() {
+  document.getElementById("formc").reset();
+}
+</script>
