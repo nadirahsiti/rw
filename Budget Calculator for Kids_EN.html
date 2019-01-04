@@ -169,8 +169,7 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <p id="listOfbtn"><button id="grayy" class="btnzz btn"><i class="icon-plus"></i>TRANSACTION</button></p>
-                                    <p>&nbsp;</p>
+                                   <button><i class="icon-plus"></i>TRANSACTION</button>
                                     <table cellspacing='0' cellpadding='0' style="display: block;" onkeydown='javascript:navigate(event);' class="rwd-table myTable">
                                         <tr>
                                             <td class='ee106'>
@@ -540,7 +539,7 @@
                 </div>
             </div>
         </div>
-        <div id="listOfbtn"><span id='grayy' class="btn button-reset"><i class="icon-refresh"></i></span> <span id='redd' class='btn btn-label btn-label-right button-update'>Update</span> <span id='redd' class="btn btn-xs btn-primary btn-danger" data-type="outgoings" onclick="printDiv('printMe')"><i class="icon-print"></i> print</span> </div>
+        <div id="listOfbtn"><span id='grayy' class="btn button-reset"  onclick="myFunction()"><i class="icon-refresh"></i></span> <span id='redd' class="btn btn-xs btn-primary btn-danger" data-type="outgoings" onclick="printDiv('printMe')"><i class="icon-print"></i> print</span> </div>
     </div>
 </main>
 <style>
@@ -735,7 +734,7 @@
         var lable = $(".btnzz").text().trim();
 
         if (lable == "Hide") {
-            $(".btnzz").text("Add");
+            $(".btnzz").text("Show");
             $(".myTable").hide();
         } else {
             $(".btnzz").text("Hide");
